@@ -88,7 +88,6 @@ To simulate a real-world collaborative environment, please follow these GitHub p
 
 - [YOLO Documentation](https://pjreddie.com/darknet/yolo/)
 - [GitHub Workflow Guide](https://guides.github.com/introduction/flow/)
-- Example video: Check the `videos` folder in the repository.
 
 ---
 
