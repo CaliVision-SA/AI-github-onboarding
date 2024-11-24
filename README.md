@@ -51,7 +51,10 @@ To simulate a real-world collaborative environment, please follow these GitHub p
    - Develop your AI application on your branch.
 
 4. **Commit**
-   - When you are done with the project, commit and push your code to your branch. We would like to see progressive commits during this exercise - so please make sure to commit and push in increments. 
+   - When you are done with the project, commit and push your code to your branch. We would like to see progressive commits during this exercise - so please make sure to commit and push in increments.
+  
+5. **Pull request**
+   - Create a pull request for your code to be reviewed by Shaun and Joseph.
 
 ---
 
