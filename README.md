@@ -1,72 +1,98 @@
-Table of Contents
+# AI GitHub Onboarding Task
 
-    Purpose of This Task
-    Project Overview
-    GitHub Requirements
-    AI Project Requirements
-    Submission Guidelines
-    Resources
-    Conclusion
+## Table of Contents
+1. [Purpose of This Task](#purpose-of-this-task)
+2. [Project Overview](#project-overview)
+3. [GitHub Requirements](#github-requirements)
+4. [AI Project Requirements](#ai-project-requirements)
+5. [Submission Guidelines](#submission-guidelines)
+6. [Resources](#resources)
+7. [Conclusion](#conclusion)
 
-Purpose of This Task
-    Hi all! This task simply test your github proficiency, just to ensure that you have the basic skills to work with github within a team.
+---
 
-    Collaborative development is a cornerstone of our work environment. Proficiency with Git and GitHub ensures that everyone can contribute effectively, manage code changes, and maintain project integrity. This task will assess and enhance your ability to:
+## Purpose of This Task
 
-        1) Use basic Git commands (add, commit, push, etc.)
-        2) Work with branches to manage feature development
-        3) Collaborate through pull requests and code reviews
+Hi all! This task is designed to test your GitHub proficiency, ensuring you have the basic skills required to work effectively within a team.
 
-AI Engagement
+Collaborative development is a cornerstone of our work environment. Proficiency with Git and GitHub ensures that everyone can contribute effectively, manage code changes, and maintain project integrity. This task will assess and enhance your ability to:
 
+1. Use basic Git commands (e.g., `add`, `commit`, `push`, etc.).
+2. Work with branches to manage feature development.
+3. Collaborate through pull requests and code reviews.
 
-Project Overview
-Objective
+---
 
-Create an AI application that:
+## Project Overview
 
-    1) Detects humans in a video using a pre-trained object detection model (e.g., YOLO)
-    2) Implements the logic to track how long each person remains in the frame
-    3) Changes the color of each person's bounding box based on the duration they have been in the frame:
-        Red: 0-2 seconds
-        Orange: 2-5 seconds
-        Green: 5 or more seconds
+Your task is to create an AI application that:
 
-GitHub Requirements
+1. Detects humans in a video using a pre-trained object detection model (e.g., YOLO).
+2. Implements the logic to track how long each person remains in the frame.
+3. Changes the color of each person's bounding box based on the duration they have been in the frame:
+   - **Red**: 0-2 seconds
+   - **Orange**: 2-5 seconds
+   - **Green**: 5+ seconds
+
+---
+
+## GitHub Requirements
 
 To simulate a real-world collaborative environment, please follow these GitHub practices:
 
-    Clone the Repository
-        Clone your forked repository to your local machine.
-        This is the url to the github repo: https://github.com/CaliVision-SA/AI-github-onboarding.git
+1. **Clone the Repository**
+   - Clone your forked repository to your local machine.
+   - Repository URL: [https://github.com/CaliVision-SA/AI-github-onboarding.git](https://github.com/CaliVision-SA/AI-github-onboarding.git)
 
-    Create a Branch
-        Create a new branch named yourname_test-branch. (eg. of branch name: "Shaun_Johnson-branch")
+2. **Create a Branch**
+   - Create a new branch named `<yourname_test-branch>` (e.g., `Shaun_Johnson-branch`).
 
-    Implement the Project
-        Develop your AI application on your branch.
+3. **Implement the Project**
+   - Develop your AI application on your branch.
 
-    Commit
-        When you are done with the project, commit and push your code to your branch.
+4. **Commit**
+   - When you are done with the project, commit and push your code to your branch.
 
+---
 
-AI Project Requirements
+## AI Project Requirements
 
-    Human Detection
-        Use a pre-trained object detection model to detect humans in each frame of the video.
+1. **Human Detection**
+   - Use a pre-trained object detection model (e.g., YOLO) to detect humans in each frame of the video.
 
-    Finite State Machine (FSM)
-        Implement the logic to track how long each detected person remains within the frame.
-        Time thresholds for state transitions:
-            0-2 seconds: Red
-            2-5 seconds: Orange
-            5+ seconds: Green
+2. **Finite State Machine (FSM)**
+   - Implement logic to track how long each detected person remains within the frame.
+   - Time thresholds for state transitions:
+     - **Red**: 0-2 seconds
+     - **Orange**: 2-5 seconds
+     - **Green**: 5+ seconds
 
-    Performance Considerations
-        Optimize your code for real-time processing, if possible.
+3. **Performance Considerations**
+   - Optimize your code for real-time processing, if possible.
 
+### Tips:
+- Use an object-oriented approach to keep track of humans.
+- Use a YOLO model to perform detections and leverage its built-in functionality to track people.
+- Refer to the video within the `videos` folder to see an example of how the output should look.
 
-    Tips:
-        1) Use an object orientated approach to keeping track of humans
-        2) Use a yolo model to do the detections, and use its built in functionality to track people
-        3) Please see the video within the "videos" folder to see an example of how the output should look
+---
+
+## Submission Guidelines
+
+1. Create a pull request from your branch to the main branch of the repository.
+2. Add meaningful comments in your pull request to explain your changes.
+3. Ensure your code is clean, well-documented, and follows the project's style guidelines.
+
+---
+
+## Resources
+
+- [YOLO Documentation](https://pjreddie.com/darknet/yolo/)
+- [GitHub Workflow Guide](https://guides.github.com/introduction/flow/)
+- Example video: Check the `videos` folder in the repository.
+
+---
+
+## Conclusion
+
+This task is an opportunity to demonstrate your GitHub skills and AI development abilities. Please ensure that your implementation adheres to the requirements and guidelines outlined above. Happy coding!
