@@ -48,9 +48,11 @@ class HumanDetectionModel:
 
     def process_video(self, video_path):
         """
-        Process a video, detect humans, and display their bounding boxes with time-based color coding.
+        Detect humans by processing the video 
         """
         cap = cv2.VideoCapture(video_path)
+        fourcc = cv2.VideoWriter_fourcc(*'mov')  
+        out = cv2.VideoWriter('/videos', fourcc, 30.0, (640, 480)) 
 
         while cap.isOpened():
             ret, frame = cap.read()
@@ -61,6 +63,7 @@ class HumanDetectionModel:
             results = self.model(frame)
             detections = results.xyxy[0].cpu().numpy()
             self.update_tracked_people(detections, frame_time)
+
             for detection in detections:
                 x1, y1, x2, y2, confidence, class_id = detection
                 if int(class_id) != self.person_class_id:
@@ -78,11 +81,14 @@ class HumanDetectionModel:
                     color,
                     2,
                 )
+            #save the video
+            out.write(frame) 
 
             cv2.imshow('Human Detection and Tracking', frame)
-            # quit if q is pressed 
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
 
         cap.release()
+        out.release()  
         cv2.destroyAllWindows()
+
