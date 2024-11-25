@@ -4,7 +4,8 @@ from datetime import datetime
 
 
 class HumanDetectionModel:
-    def __init__(self, model_name='yolov5s', person_class_id=0): # For development, very often we use the most accurate model just to make development a bit easier. Not sure what the largest yolov5 model is but you would also have checked out yolov8-yolov11 models. They have some very cool features that comes in handy!
+    def __init__(self, model_name='yolov5s', person_class_id=0): 
+        # For development, very often try to use the largest model that works - yolov5 does not seem as accurate as yolov8 for example. Generally, we use a model that is accurate enough to work, but also not too heavy to process (yolov8x is for example much more processing heavy than yolov8n).
         """
         Initialize the human detection model with a YOLO model.
         """
