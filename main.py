@@ -1,1 +1,2 @@
-#AI github Project
+
+print("This is just a test")
