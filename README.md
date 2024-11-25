@@ -45,7 +45,7 @@ To simulate a real-world collaborative environment, please follow these GitHub p
    - Repository URL: [https://github.com/CaliVision-SA/AI-github-onboarding.git](https://github.com/CaliVision-SA/AI-github-onboarding.git)
 
 2. **Create a Branch**
-   - Create a new branch named `<yourname_test-branch>` (e.g., `Shaun_Johnson-branch`).
+   - Create a new branch named `<yourname_test-branch>` (e.g., `Qaasim_test-branch`).
 
 3. **Implement the Project**
    - Develop your AI application on your branch.
