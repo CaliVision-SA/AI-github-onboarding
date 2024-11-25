@@ -51,7 +51,7 @@ class HumanDetectionModel:
         Detect humans by processing the video 
         """
         cap = cv2.VideoCapture(video_path)
-        fourcc = cv2.VideoWriter_fourcc(*'mov')  
+        fourcc = cv2.VideoWriter_fourcc(*'mp4v')  
         out = cv2.VideoWriter('/videos', fourcc, 30.0, (640, 480)) 
 
         while cap.isOpened():
