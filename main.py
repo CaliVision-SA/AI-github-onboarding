@@ -83,13 +83,11 @@ def get_landmarks(frame, ids, class_ids, confidences, bboxes, pose_estimator):
     for tracker_id, class_id, conf, bbox in zip(ids, class_ids, confidences, bboxes):
         if class_id == 0:  # person
             x1, y1, x2, y2 = bbox
-
-            # Crop to the person's bounding box
             person_crop = frame[y1:y2, x1:x2]
             if person_crop.size == 0:
                 continue
 
-            # Convert BGR to RGB for MediaPipe
+            # Convert to RGB for MediaPipe
             person_crop_rgb = cv2.cvtColor(person_crop, cv2.COLOR_BGR2RGB)
             results = pose_estimator.process(person_crop_rgb)
 
@@ -98,9 +96,11 @@ def get_landmarks(frame, ids, class_ids, confidences, bboxes, pose_estimator):
                 current_landmarks = []
                 for lm in results.pose_landmarks.landmark:
                     # Convert normalized coordinates to absolute pixel values
-                    px = x1 + int(lm.x * w)
-                    py = y1 + int(lm.y * h)
-                    current_landmarks.append((px, py, lm.visibility))
+                    px = x1 + (lm.x * w)
+                    py = y1 + (lm.y * h)
+                    # Scale z by the width of the bounding box
+                    pz = lm.z * w  
+                    current_landmarks.append((px, py, pz, lm.visibility))
 
                 landmarks_per_person.append([tracker_id, current_landmarks])
 
@@ -133,7 +133,6 @@ def annotate_frame(frame, ids, class_ids, confidences, bboxes, landmarks_per_per
                 for (lx, ly, vis) in landmarks_dict[tracker_id]:
                     if vis > 0.5:
                         cv2.circle(frame, (lx, ly), 5, (0, 255, 0), -1)
-
 
 # Example usage:
 # Initialize video sources
