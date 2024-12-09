@@ -1,6 +1,5 @@
 import time
 
-
 object_to_id_map = {}
 
 class humanClass:
@@ -17,8 +16,7 @@ class humanClass:
             return (0, 165, 255), delta
         else:  # Green
             return (0, 255, 0), delta
-
-
+        
 
 
 
