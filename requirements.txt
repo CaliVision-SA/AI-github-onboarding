@@ -1,4 +1,0 @@
-### Please populate with the packages that you used for the project: eg. 
-#pillow
-#tqdm
-#numpy
